@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            div{
+                border: 10px solid red;
+                padding: 10px;
+            }
+            div > ul{
+                 border: 10px solid green;
+                padding: 10px;
+            }
+            div > ul > li{
+                 border: 10px solid blue;
+                padding: 10px;
+            }
+            div > ul > li > span{
+                display: block;
+                 border: 10px solid orange;
+                padding: 10px;
+            }
+        </style>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    </head>
+    <body>
+        <div>
+            div
+            <ul>
+                ul
+                <li>
+                    Li
+                    <span>span</span>
+                </li>
+            </ul>
+        </div>
+
+        
+
+
+        <script>
+            // 1 page load
+
+            // 1.1(function($){})(jQuery);
+            // 1.2 $(document).ready();
+            // 1.3 jQuery(function(){});
+
+
+            // 2 .direct
+
+            $('span').parentsUntil('div').css({'border-color':'purple'})
+
+
+
+
+        </script>
+        
+    </body>
+
+
+</html>
