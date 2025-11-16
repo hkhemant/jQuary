@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            .parent{
+                font-size: 3em;
+                border: 1px solid red;
+                padding: 10px;
+
+            }
+            .child{
+                border: 1px solid green;
+                padding: 10px;
+
+            }
+            .grandchild{
+                border: 1px dashed blue;
+                padding: 10px;
+            }
+        </style>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    </head>
+    <body>
+        <div class="parent">
+            parent
+            <div class="child">
+                child 1
+                <div class="grandchild">grandchild1_1</div>
+                <div class="grandchild">grandchild1_2</div>
+                <div class="grandchild">grandchild1_3</div>
+            </div>
+            <div class="child">
+                child2
+                <div class="grandchild">grandchild2_1</div>
+                <div class="grandchild">grandchild2_2</div>
+                <div class="grandchild">grandchild2_3</div>
+            </div>
+        </div>
+
+
+        <script>
+            // check if the page loaded successfully.
+            //1.()();
+
+            (function(){
+                // alert('page')
+                // //$ (selector).action
+                // var x = $('.grandchild').parent()
+                // //css("proertyname",value)
+                // //    x.css('color',"purple")
+                // x.css('border', "10px solid purple")
+
+                let y = $('.grandchild').parents();
+                y.css('border','10px solid red');
+
+
+
+            })(jQuery);
+        </script>
+    </body>
+</html>
